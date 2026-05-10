@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from "react";
 import Link from "next/link";
+import Image from "next/image";
 import { usePathname } from "next/navigation";
 
 const navLinks = [
@@ -29,45 +30,52 @@ export default function Navigation() {
     setMobileOpen(false);
   }, [pathname]);
 
-  const navBg = scrolled || !isHome
-    ? "bg-white shadow-md"
-    : "bg-transparent";
-
-  const logoColor = scrolled || !isHome ? "text-navy-900" : "text-white";
-  const logoAccent = "text-gold-600";
-  const linkColor = scrolled || !isHome
-    ? "text-navy-700 hover:text-gold-600"
-    : "text-white/90 hover:text-white";
+  const navBg = scrolled || !isHome ? "bg-white shadow-md" : "bg-transparent";
+  const linkColor =
+    scrolled || !isHome
+      ? "text-navy-700 hover:text-gold-600"
+      : "text-white/90 hover:text-white";
   const activeColor = scrolled || !isHome ? "text-gold-600" : "text-gold-400";
 
   return (
     <header
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-400 ${navBg}`}
+      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${navBg}`}
     >
       <div className="container-custom">
         <div className="flex items-center justify-between h-20">
           {/* Logo */}
-          <Link href="/" className="flex items-center gap-3 group">
-            <div className="w-10 h-10 bg-gold-600 flex items-center justify-center flex-shrink-0">
-              <span className="text-white font-display font-bold text-lg">A</span>
-            </div>
-            <div className="leading-none">
-              <span className={`font-display font-bold text-xl tracking-tight transition-colors duration-300 ${logoColor}`}>
-                Ana<span className={logoAccent}>Mine</span>
-              </span>
-              <p className={`text-[9px] tracking-[0.18em] uppercase mt-0.5 transition-colors duration-300 ${scrolled || !isHome ? "text-slate-400" : "text-white/60"}`}>
-                Global Industrial Solutions
-              </p>
-            </div>
+          <Link href="/" className="flex items-center flex-shrink-0">
+            {scrolled || !isHome ? (
+              <Image
+                src="/images/logo.png"
+                alt="AnaMine"
+                width={140}
+                height={44}
+                className="h-10 w-auto"
+                priority
+              />
+            ) : (
+              /* White-tinted version on transparent hero */
+              <div className="relative">
+                <Image
+                  src="/images/logo.png"
+                  alt="AnaMine"
+                  width={140}
+                  height={44}
+                  className="h-10 w-auto brightness-0 invert"
+                  priority
+                />
+              </div>
+            )}
           </Link>
 
           {/* Desktop Nav */}
-          <nav className="hidden lg:flex items-center gap-8">
+          <nav className="hidden lg:flex items-center gap-6 xl:gap-8">
             {navLinks.map((link) => (
               <Link
                 key={link.href}
                 href={link.href}
-                className={`text-[13px] font-semibold tracking-wide transition-colors duration-200 relative group ${
+                className={`text-[13px] font-semibold tracking-wide transition-colors duration-200 relative group whitespace-nowrap ${
                   pathname === link.href ? activeColor : linkColor
                 }`}
               >
@@ -81,7 +89,7 @@ export default function Navigation() {
             ))}
             <Link
               href="/contact"
-              className="ml-2 bg-gold-600 hover:bg-gold-700 text-white text-[12px] font-bold tracking-widest uppercase px-5 py-2.5 transition-colors duration-200"
+              className="ml-1 bg-gold-600 hover:bg-gold-700 text-white text-[12px] font-bold tracking-widest uppercase px-5 py-2.5 transition-colors duration-200 whitespace-nowrap"
             >
               Get In Touch
             </Link>
@@ -90,7 +98,9 @@ export default function Navigation() {
           {/* Mobile Hamburger */}
           <button
             onClick={() => setMobileOpen(!mobileOpen)}
-            className={`lg:hidden flex flex-col gap-1.5 p-2 transition-colors ${scrolled || !isHome ? "text-navy-900" : "text-white"}`}
+            className={`lg:hidden flex flex-col gap-1.5 p-2 transition-colors ${
+              scrolled || !isHome ? "text-navy-900" : "text-white"
+            }`}
             aria-label="Toggle menu"
           >
             <span

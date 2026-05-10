@@ -275,7 +275,7 @@ export default function GlobalOperationsPage() {
               <h2 className="section-title-light mb-5">
                 Why Our Global Footprint Matters
               </h2>
-              <p className="text-white/60 text-lg leading-relaxed">
+              <p className="text-white/60 text-sm md:text-base leading-relaxed">
                 Being present on two continents isn&apos;t just about geography
                 — it translates into real advantages for our clients.
               </p>
@@ -307,7 +307,7 @@ export default function GlobalOperationsPage() {
             <h2 className="section-title mb-6 max-w-xl mx-auto">
               Ready to Partner With Our Global Team?
             </h2>
-            <p className="text-slate-500 text-lg mb-8 max-w-lg mx-auto">
+            <p className="text-slate-500 text-sm md:text-base mb-8 max-w-lg mx-auto">
               Reach out to the office closest to you and let&apos;s explore how
               AnaMine can serve your operations.
             </p>

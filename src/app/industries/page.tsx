@@ -215,7 +215,7 @@ export default function IndustriesPage() {
               <h2 className="section-title-light mb-6">
                 One Partner. Three Sectors. Unified Approach.
               </h2>
-              <p className="text-white/60 text-lg leading-relaxed">
+              <p className="text-white/60 text-sm md:text-base leading-relaxed">
                 AnaMine&apos;s multi-sector experience creates a unique
                 cross-pollination of ideas, best practices, and network
                 connections — benefits that single-sector specialists simply
@@ -260,7 +260,7 @@ export default function IndustriesPage() {
             <h2 className="section-title mb-6 max-w-xl mx-auto">
               Operating in One of These Sectors?
             </h2>
-            <p className="text-slate-500 text-lg mb-8 max-w-lg mx-auto">
+            <p className="text-slate-500 text-sm md:text-base mb-8 max-w-lg mx-auto">
               Let&apos;s talk about how AnaMine&apos;s industry expertise can
               create value for your operations.
             </p>

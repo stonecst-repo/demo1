@@ -159,7 +159,7 @@ export default function AboutPage() {
 
             {/* Stats Cards */}
             <ScrollReveal delay={150}>
-              <div className="grid grid-cols-2 gap-4">
+              <div className="grid grid-cols-2 gap-4 max-w-sm mx-auto lg:mx-0 lg:max-w-none">
                 {[
                   { value: "28+", label: "Years Experience", desc: "Since 1996" },
                   { value: "35K+", label: "Projects", desc: "Completed globally" },
@@ -236,7 +236,7 @@ export default function AboutPage() {
               <p className="section-label mb-4">What Guides Us</p>
               <span className="gold-line mx-auto mb-6" />
               <h2 className="section-title mb-5">Our Core Values</h2>
-              <p className="text-slate-500 text-lg leading-relaxed">
+              <p className="text-slate-500 text-sm md:text-base leading-relaxed">
                 These principles define how we work, how we think, and how we
                 show up for our clients every single day.
               </p>
@@ -271,31 +271,25 @@ export default function AboutPage() {
               <p className="section-label mb-4">Our Journey</p>
               <span className="gold-line mx-auto mb-6" />
               <h2 className="section-title-light mb-5">28 Years of Growth</h2>
-              <p className="text-white/60 text-lg leading-relaxed">
+              <p className="text-white/60 text-sm md:text-base leading-relaxed">
                 Key milestones that shaped AnaMine into the global industrial
                 solutions partner it is today.
               </p>
             </div>
           </ScrollReveal>
 
-          <div className="relative">
-            {/* Center line (desktop) */}
-            <div className="hidden lg:block absolute left-1/2 top-0 bottom-0 w-px bg-gradient-to-b from-transparent via-gold-700/50 to-transparent" />
-
+          <div className="relative pl-6 border-l border-gold-700/40 max-w-2xl mx-auto">
             <div className="space-y-8">
               {timeline.map((item, i) => (
                 <ScrollReveal key={item.year} delay={i * 100}>
-                  <div className={`flex flex-col lg:flex-row gap-8 items-start lg:items-center ${i % 2 === 0 ? "lg:flex-row" : "lg:flex-row-reverse"}`}>
-                    <div className={`flex-1 ${i % 2 === 0 ? "lg:text-right" : "lg:text-left"}`}>
-                      <div className={`bg-navy-900 border border-white/5 p-6 ${i % 2 === 0 ? "lg:ml-auto lg:mr-10" : "lg:mr-auto lg:ml-10"} max-w-lg`}>
-                        <span className="text-gold-500 font-display font-bold text-sm tracking-wide">{item.year}</span>
-                        <h3 className="font-display font-bold text-white text-lg mt-1 mb-2">{item.title}</h3>
-                        <p className="text-white/60 text-sm leading-relaxed">{item.description}</p>
-                      </div>
-                    </div>
+                  <div className="relative">
                     {/* Dot */}
-                    <div className="hidden lg:flex w-4 h-4 bg-gold-600 border-2 border-gold-400 rounded-full flex-shrink-0 z-10" />
-                    <div className="flex-1" />
+                    <div className="absolute -left-[33px] top-5 w-4 h-4 bg-gold-600 border-2 border-gold-400 rounded-full z-10" />
+                    <div className="bg-navy-900 border border-white/5 p-6">
+                      <span className="text-gold-500 font-display font-bold text-sm tracking-wide">{item.year}</span>
+                      <h3 className="font-display font-bold text-white text-base mt-1 mb-2">{item.title}</h3>
+                      <p className="text-white/60 text-sm leading-relaxed">{item.description}</p>
+                    </div>
                   </div>
                 </ScrollReveal>
               ))}
@@ -312,7 +306,7 @@ export default function AboutPage() {
             <h2 className="section-title mb-6 max-w-xl mx-auto">
               Ready to Start a Partnership?
             </h2>
-            <p className="text-slate-500 text-lg mb-8 max-w-lg mx-auto">
+            <p className="text-slate-500 text-sm md:text-base mb-8 max-w-lg mx-auto">
               Contact our team to explore how AnaMine can support your industrial
               and digital transformation goals.
             </p>
