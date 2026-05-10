@@ -1,0 +1,110 @@
+{
+  "company": {
+    "name": "AnaMine",
+    "fullName": "AnaMine Comercio e Servico LDA",
+    "tagline": "Exceptional Services, Unique Values",
+    "description": "Global partner for mining, industrial chemicals, procurement, and digital transformation solutions.",
+    "founded": "1996",
+    "email": "info@anamine.com.tr",
+    "website": "https://www.anamine.com.tr"
+  },
+  "stats": {
+    "yearsExperience": 28,
+    "projectsCompleted": 35000,
+    "continents": 2,
+    "industries": 3
+  },
+  "offices": [
+    {
+      "type": "Headquarters",
+      "city": "Istanbul",
+      "country": "Turkey",
+      "flag": "🇹🇷",
+      "address": "Istanbul, Turkey",
+      "phone": "+90 (0) ___________",
+      "email": "info@anamine.com.tr",
+      "hours": "Monday – Friday: 09:00 – 18:00 (GMT+3)"
+    },
+    {
+      "type": "Branch Office",
+      "city": "Luanda",
+      "country": "Angola",
+      "flag": "🇦🇴",
+      "address": "Condominio Belas Business Park, Etapa V, Edificio Cuanza Sul, 6° Piso, Talatona Municipality, Luanda, Angola",
+      "phone": "+244 927 359 000",
+      "email": "info@anamine.com.tr",
+      "hours": "Monday – Friday: 08:00 – 17:00 (GMT+1)"
+    }
+  ],
+  "services": [
+    {
+      "id": "consultancy",
+      "title": "Supply Chain & Procurement Consultancy",
+      "shortDesc": "End-to-end supply chain maturity assessment, procurement strategy, contract management, and logistics optimization.",
+      "items": [
+        "Supply Chain Maturity Assessment",
+        "Procurement & Contract Management",
+        "Logistics, Inventory & Warehouse Management",
+        "Sales & Distribution Strategy",
+        "Risk Assessment & Mitigation"
+      ]
+    },
+    {
+      "id": "digital",
+      "title": "Digital Transformation",
+      "shortDesc": "IT maturity assessments, e-sourcing platforms, ERP implementation, blockchain solutions, and dashboard systems.",
+      "items": [
+        "IT Maturity Assessment",
+        "E-Sourcing Platforms",
+        "Dashboard Implementation",
+        "Inventory Optimization Software",
+        "Blockchain Solutions",
+        "ERP Implementation Services"
+      ]
+    },
+    {
+      "id": "sourcing",
+      "title": "Industrial Sourcing",
+      "shortDesc": "Global procurement of minerals, mining chemicals, and industrial consumables.",
+      "items": [
+        "Minerals Procurement",
+        "Mining Chemicals",
+        "Industrial Consumables"
+      ]
+    }
+  ],
+  "industries": [
+    {
+      "id": "mining",
+      "title": "Mining",
+      "description": "Core industry focus. Comprehensive mining solutions including chemicals, consumables, and digital tools.",
+      "yearsExperience": 28
+    },
+    {
+      "id": "automotive",
+      "title": "Automotive",
+      "description": "40+ years expertise in Turkey's automotive sector, expanding into Angola and African markets.",
+      "yearsExperience": 40
+    },
+    {
+      "id": "oil-gas",
+      "title": "Oil & Gas",
+      "description": "40+ years experience in oil & gas procurement and supply chain in Turkey.",
+      "yearsExperience": 40
+    }
+  ],
+  "seo": {
+    "defaultTitle": "AnaMine | Mining, Industrial Chemicals & Digital Transformation",
+    "defaultDescription": "AnaMine delivers integrated mining chemicals, industrial procurement, supply chain consultancy, and digital transformation solutions globally.",
+    "keywords": [
+      "mining chemicals",
+      "industrial procurement",
+      "digital transformation",
+      "supply chain consultancy",
+      "Angola mining",
+      "Turkey industrial",
+      "ERP implementation",
+      "e-sourcing"
+    ]
+  }
+}
